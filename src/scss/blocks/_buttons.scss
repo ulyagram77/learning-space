@@ -1,0 +1,43 @@
+@use '../base/variables' as vars;
+
+.btn {
+  width: 200px;
+  height: 42px;
+  padding: 0 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  column-gap: 20px;
+
+  background-color: vars.$secondary-color;
+  color: vars.$primary-color;
+  font-size: 19px;
+  text-transform: uppercase;
+  border: 2px solid vars.$primary-color;
+  border-radius: 20px;
+  box-shadow: 0 0 8px 4px rgba(255, 255, 255, 1);
+  white-space: nowrap;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: vars.$primary-color;
+      color: vars.$text-color;
+
+      svg path {
+        fill: vars.$text-color;
+      }
+    }
+  }
+
+  &_circle {
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

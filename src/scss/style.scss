@@ -1,0 +1,52 @@
+@use 'base/null';
+@use 'base/variables' as vars;
+@use 'blocks/index';
+
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: vars.$font-family-base;
+  font-weight: 400;
+  font-size: 16px;
+  color: vars.$text-color;
+  background: vars.$bg-color;
+}
+
+#app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: vars.$container-width + vars.$container-padding-x * 2;
+  margin-inline: auto;
+  padding-inline: vars.$container-padding-x;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: vars.$transition-duration;
+}
+
+a {
+  color: vars.$text-color;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
