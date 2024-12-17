@@ -1,0 +1,138 @@
+@use '../base/variables' as vars;
+
+.hero {
+  &__title {
+    font-family: vars.$font-family-secondary;
+    font-weight: 700;
+    font-size: 148px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    line-height: normal;
+
+    &_left {
+      text-align-last: left;
+    }
+  }
+
+  &__subtitle {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__slider {
+    width: 500px;
+    height: 500px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__info {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 20px;
+    font-size: 18px;
+
+    a {
+      text-decoration: none;
+
+      @media (any-hover: hover) {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    column-gap: 25px;
+  }
+
+  &__button {
+    margin: 50px 0;
+    width: 300px;
+    height: 75px;
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: 0.05em;
+  }
+}
+
+.slider-hero {
+  &__slide {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    width: 90%;
+    position: relative;
+    display: block;
+    font-family: vars.$font-family-secondary;
+    background-color: #fff;
+    font-weight: 700;
+    font-size: 34px;
+    color: vars.$primary-color;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 8px 10px rgba(247, 247, 247, 1);
+    transform: translateY(-10px);
+  }
+}
+
+swiper-container::part(pagination) {
+  top: 40%;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 21px;
+}
+
+swiper-container::part(bullet) {
+  transform: scale(1.5);
+  background-color: #F7F7F7;
+  opacity: 70%;
+  transition: transform vars.$transition-duration ease, background-color vars.$transition-duration ease;
+}
+
+swiper-container::part(bullet-active) {
+  transform: scale(2.5);
+  background-color: #F7F7F7;
+}
+
+
+swiper-container::part(wrapper) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,7 +1,11 @@
+@use '../base/variables' as vars;
+
 .footer {
+  padding: 20px 0;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  background-color: vars.$primary-color;
 
   p {
     font-size: 20px;
