@@ -1,0 +1,9 @@
+@use '../base/variables' as vars;
+
+.heading {
+  font-family: vars.$font-family-secondary;
+  color: vars.$text-color;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: normal;
+}

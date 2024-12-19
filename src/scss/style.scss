@@ -1,6 +1,13 @@
 @use 'base/null';
 @use 'base/variables' as vars;
-@use 'blocks/index';
+
+@use 'ui/buttons';
+@use 'ui/headings';
+
+@use 'blocks/header';
+@use 'blocks/footer';
+@use 'blocks/main';
+@use 'blocks/about';
 
 @import 'normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -17,6 +24,9 @@ body {
   font-size: 16px;
   color: vars.$text-color;
   background: vars.$bg-color;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #app {

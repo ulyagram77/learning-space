@@ -4,13 +4,9 @@
   margin: 40px 0;
 
   &__title {
-    font-family: vars.$font-family-secondary;
-    font-weight: 700;
     font-size: 148px;
-    text-transform: uppercase;
     text-align: center;
     margin: 0;
-    line-height: normal;
 
     &_left {
       text-align: left;
@@ -149,6 +145,7 @@ swiper-container::part(wrapper) {
 
     &__subtitle {
       font-size: 25px;
+      margin-bottom: 40px;
     }
 
     &__info {
