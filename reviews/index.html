@@ -13,29 +13,29 @@
   <link rel="manifest" href="/favicon/site.webmanifest" />
   <!-- OG tags -->
   <!-- Primary Meta Tags -->
-  <title>Learning Space - Про наші курси</title>
-  <meta name="title" content="Learning Space - Про наші курси" />
-  <meta name="description" content="Дізнайся більше про наші курси." />
+  <title>Learning Space - Відгуки</title>
+  <meta name="title" content="Learning Space - Відгуки" />
+  <meta name="description" content="Відгуки про курс." />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://metatags.io/" />
-  <meta property="og:title" content="Learning Space - Про наші курси" />
-  <meta property="og:description" content="Дізнайся більше про наші курси." />
+  <meta property="og:title" content="Learning Space - Відгуки" />
+  <meta property="og:description" content="Відгуки про курс." />
   <meta property="og:image" content="/images/opengraph-image.jpg" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://metatags.io/" />
-  <meta property="twitter:title" content="Learning Space - Про наші курси" />
-  <meta property="twitter:description" content="Дізнайся більше про наші курси." />
+  <meta property="twitter:title" content="Learning Space - Відгуки" />
+  <meta property="twitter:description" content="Відгуки про курс." />
   <meta property="twitter:image" content="/images/opengraph-image.jpg" />
 </head>
 
 <body>
   <div id="app">
     <header class="header">
-      <a href="/" class="header__logo logo">
+      <a href='/' class="header__logo logo">
         <svg width="39" height="39" viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg" class="logo__img">
           <path
             d="M21.675 38.6062L18.5625 31.4062C21.5625 30.3187 24.3187 28.875 26.8687 27.15L21.6562 38.6062M7.59374 20.4375L0.393738 17.3437L11.85 12.1312C10.125 14.6812 8.68124 17.4562 7.59374 20.4375ZM34.5 4.49999C28.95 4.08749 24.75 6.05624 20.3437 10.7062C15.9187 15.3375 14.0437 19.1437 12.9375 22.0312L17.0062 25.9687C21.3 24.3375 25.125 21.8812 28.3125 18.675C34.5 12.5062 34.8187 7.12499 34.5 4.49999ZM17.625 8.06249C22.5562 2.81249 30.75 -0.975014 37.6125 1.40624C37.6125 1.40624 41.5875 10.7062 30.9562 21.375C26.8312 25.4437 22.3687 27.9375 18.3562 29.5125C17.9062 29.6812 16.2 30.2437 14.3625 28.65L10.3687 24.6562C9.31874 23.6062 8.98124 22.0687 9.48749 20.6625C11.0625 16.6875 12.7687 13.2937 17.625 8.06249ZM8.71874 38.25H6.07499L13.7437 30.5625C14.3062 30.9562 14.925 31.2375 15.5625 31.4062L8.71874 38.25ZM0.749988 38.25V35.6062L9.69374 26.6437L12.375 29.3062L3.39374 38.25H0.749988ZM0.749988 32.9437V30.2812L7.59374 23.4375C7.76249 24.0937 8.04374 24.7125 8.43749 25.2562L0.749988 32.9437ZM27 8.24999C27.9946 8.24999 28.9484 8.64507 29.6516 9.34834C30.3549 10.0516 30.75 11.0054 30.75 12C30.75 14.0812 29.0812 15.75 27 15.75C26.0054 15.75 25.0516 15.3549 24.3483 14.6516C23.6451 13.9484 23.25 12.9945 23.25 12C23.25 11.0054 23.6451 10.0516 24.3483 9.34834C25.0516 8.64507 26.0054 8.24999 27 8.24999Z"
@@ -50,12 +50,8 @@
         <ul class="menu__list">
           <li class="menu__item"><a href="/" class="menu__link">Головна</a></li>
           <li class="menu__item"><a href="/about/" class="menu__link">Про нас</a></li>
-          <li class="menu__item">
-            <a href="/courses/" class="menu__link">Про курси</a>
-          </li>
-          <li class="menu__item">
-            <a href="/pick_course/" class="menu__link">Обрати курс</a>
-          </li>
+          <li class="menu__item"><a href="/courses/" class="menu__link">Про курси</a></li>
+          <li class="menu__item"><a href="/pick_course/" class="menu__link">Обрати курс</a></li>
         </ul>
 
         <button class="menu__button btn">
@@ -108,16 +104,14 @@
     </header>
 
     <main>
-      <section class="about-courses">
+      <section class="reviews">
         <div class="container">
-          <div class='about-courses__wrapper'>
-            <swiper-container slides-per-view="3" space-between="113" centeredSlides="true" pagination="true"
-              pagination-type="bullets" pagination-clickable="true" class="about-courses__slider slider-about">
-            </swiper-container>
+          <div class="reviews__wrapper">
+            <div class="reviews__card">
+            </div>
 
-            <swiper-container direction='vertical' slides-per-view="3" space-between="20" centeredSlides="true"
-              class="about-courses__slider slider-about-mobile">
-            </swiper-container>
+            <ul class="reviews__list">
+            </ul>
           </div>
         </div>
       </section>
@@ -128,7 +122,7 @@
     </footer>
   </div>
   <script type="module" src="/src/js/main.js"></script>
-  <script type="module" src="/src/js/courses.js"></script>
+  <script type="module" src="/src/js/reviews.js"></script>
 </body>
 
 </html>

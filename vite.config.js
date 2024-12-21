@@ -19,6 +19,7 @@ export default defineConfig({
         main: path.resolve(__dirname, 'index.html'),
         about: path.resolve(__dirname, 'about/index.html'),
         courses: path.resolve(__dirname, 'courses/index.html'),
+        reviews: path.resolve(__dirname, 'reviews/index.html'),
       },
     },
   },
