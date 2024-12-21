@@ -18,7 +18,7 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, 'index.html'),
         about: path.resolve(__dirname, 'about/index.html'),
-        about_courses: path.resolve(__dirname, 'about_courses/index.html'),
+        courses: path.resolve(__dirname, 'courses/index.html'),
       },
     },
   },
