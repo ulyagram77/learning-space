@@ -6,4 +6,25 @@
   font-weight: 700;
   text-transform: uppercase;
   line-height: normal;
+
+  &_course {
+    position: relative;
+    color: vars.$primary-color;
+    text-align: center;
+    padding: 10px 0;
+
+    &-bg {
+      position: absolute;
+      inset: 0;
+      background-color: #ffff;
+      z-index: 0;
+      filter: blur(5px);
+      border-radius: 22px;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
 }

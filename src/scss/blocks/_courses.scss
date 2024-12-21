@@ -1,0 +1,177 @@
+$slide-padding: 10px;
+
+.about-courses {
+  min-height: 630px;
+  margin-bottom: 40px;
+
+  &__wrapper {
+    position: relative;
+    height: 100%;
+  }
+
+  &__slider {
+    height: 750px;
+  }
+
+  &__slide {
+    padding: 10px;
+    height: 700px;
+  }
+
+  &__course {
+    height: 100%;
+  }
+
+  &__spinner {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.course {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    width: 100%;
+    font-size: 25px;
+    transform: translateY(10px);
+  }
+
+  &__title-mobile {
+    display: none;
+  }
+
+  &__img {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  &__text {
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  &__actions {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  &__actions-mobile {
+    display: none;
+  }
+
+  &__button {
+    width: 230px;
+    padding-inline: 20px;
+    justify-content: start;
+    column-gap: 20px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .about-courses {
+    margin: 0;
+    margin-top: 40px;
+
+    &__slider {
+      height: 600px;
+    }
+
+    &__slide {
+      height: 0;
+    }
+
+    &__course {
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 0;
+    }
+  }
+
+  .course {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: start;
+
+    &__title {
+      display: none;
+    }
+
+    &__title-mobile {
+      display: block;
+      font-size: 20px;
+      color: #fff;
+      padding: 0;
+    }
+
+    &__img {
+      width: 100px;
+    }
+
+    &__content {
+      align-items: start;
+      justify-items: start;
+      flex-grow: 0;
+      flex-shrink: 0;
+      row-gap: 10px;
+    }
+
+    &__text {
+      font-size: 14px;
+      margin: 0;
+      max-width: 211px;
+      text-align: left;
+    }
+
+    &__actions {
+      display: none;
+    }
+
+    &__actions-mobile {
+      display: flex;
+      flex-basis: 100%;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__button {
+      width: 160px;
+      column-gap: 10px;
+      height: 30px;
+      font-size: 15px;
+
+      svg {
+        width: 14px;
+        aspect-ratio: 1/1;
+      }
+    }
+  }
+
+  .heading_course-bg {
+    display: none;
+  }
+}

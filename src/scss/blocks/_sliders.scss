@@ -1,0 +1,85 @@
+@use '../base/variables' as vars;
+
+//main slider
+swiper-container.slider-hero::part(pagination) {
+  top: 40%;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 21px;
+}
+
+swiper-container.slider-hero::part(bullet) {
+  transform: scale(1.5);
+  background-color: #F7F7F7;
+  opacity: 70%;
+  transition: transform vars.$transition-duration ease, background-color vars.$transition-duration ease;
+}
+
+swiper-container.slider-hero::part(bullet-active) {
+  transform: scale(2.5);
+  background-color: #F7F7F7;
+}
+
+swiper-container.slider-hero::part(wrapper) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//about courses slider
+swiper-container.slider-about::part(pagination) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 16px;
+}
+
+swiper-container.slider-about::part(bullet) {
+  transform: scale(1.5);
+  background-color: #F7F7F7;
+  opacity: 70%;
+  transition: transform vars.$transition-duration ease, background-color vars.$transition-duration ease;
+}
+
+swiper-container.slider-about::part(bullet-active) {
+  transform: scale(2.5);
+  background-color: #F7F7F7;
+}
+
+
+.slider-about-mobile {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  swiper-container.slider-about::part(pagination) {
+    display: none;
+  }
+
+  .slider-about {
+    display: none;
+  }
+
+  .slider-about-mobile {
+    display: block;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+  swiper-container::part(pagination) {
+    row-gap: 12px;
+  }
+
+  swiper-container::part(bullet) {
+    transform: scale(1);
+
+  }
+
+  swiper-container::part(bullet-active) {
+    transform: scale(2);
+
+  }
+}

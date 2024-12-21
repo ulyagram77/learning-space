@@ -1,0 +1,46 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "project manager",
+      "description": "ти навчишся керувати ІТ-проєктами та agile-командами",
+      "reviewsCount": 32,
+      "img": "/images/hero-courses/course1.png"
+    },
+    {
+      "id": 2,
+      "name": "cybersecurity",
+      "description": "ти навчишся створювати систему кіберзахисту застосунків",
+      "reviewsCount": 45,
+      "img": "/images/hero-courses/course2.png"
+    },
+    {
+      "id": 3,
+      "name": "web developer",
+      "description": "ти навчишся створювати сайти та вебзастосунки з нуля",
+      "reviewsCount": 32,
+      "img": "/images/hero-courses/course3.png"
+    },
+    {
+      "id": 4,
+      "name": "smm specialist",
+      "description": "Ти навчишся просувати бренди в соцмережах та налаштовувати рекламу",
+      "reviewsCount": 122,
+      "img": "/images/hero-courses/course4.png"
+    },
+    {
+      "id": 5,
+      "name": "test engineer",
+      "description": "ти навчишся тестувати вебсайти та мобільні застосунки",
+      "reviewsCount": 75,
+      "img": "/images/hero-courses/course5.png"
+    },
+    {
+      "id": 6,
+      "name": "ux/ui designer",
+      "description": "Ти навчишся створювати сайти та вебзастосунки з нуля",
+      "reviewsCount": 107,
+      "img": "/images/hero-courses/course6.png"
+    }
+  ]
+}

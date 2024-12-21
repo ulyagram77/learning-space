@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import path from 'node:path';
+import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
   resolve: {
@@ -7,11 +8,17 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  css: {
+    postcss: {
+      plugins: [autoprefixer({})],
+    },
+  },
   build: {
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
-        about: path.resolve(__dirname, 'about/index.html'), // Убедитесь, что у вас есть папка about
+        about: path.resolve(__dirname, 'about/index.html'),
+        about_courses: path.resolve(__dirname, 'about_courses/index.html'),
       },
     },
   },

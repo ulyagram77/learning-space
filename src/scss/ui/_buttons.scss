@@ -2,7 +2,7 @@
 
 .btn {
   width: 200px;
-  height: 42px;
+  height: 45px;
   padding: 0 10px;
 
   display: flex;
@@ -28,6 +28,10 @@
         fill: vars.$text-color;
       }
     }
+  }
+
+  &_white {
+    background-color: #fff;
   }
 
   &_circle {
