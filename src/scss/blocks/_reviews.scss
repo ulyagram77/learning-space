@@ -51,6 +51,12 @@
     font-size: 14px;
     text-transform: uppercase;
     z-index: 1;
+
+    svg {
+      width: 27px;
+      height: 27px;
+      flex-shrink: 0;
+    }
   }
 
   &__item-bg {
@@ -87,8 +93,6 @@
       grid-template-columns: auto;
       place-items: center;
     }
-
-
   }
 }
 
