@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const cardContainer = document.querySelector('.reviews__card');
       const course = await CoursesService.getCourseById(id);
-      console.log(course);
 
       cardContainer.innerHTML = '';
       cardContainer.innerHTML = `

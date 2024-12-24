@@ -1,0 +1,45 @@
+@use '../base/variables' as vars;
+
+.pick {
+  margin: 40px 0;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px 110px;
+
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+  }
+
+  &__link {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  &__title {
+    width: 95%;
+    transform: translateY(5px);
+
+    .heading_course-bg {
+      display: block;
+    }
+  }
+
+  &__img {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
