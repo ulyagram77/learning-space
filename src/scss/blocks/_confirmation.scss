@@ -12,15 +12,6 @@
   border: 3px solid vars.$border-color;
   box-shadow: 0 0 8px 12px rgba(255, 255, 255, 1);
   border-radius: 30px;
-
-  li {
-    padding-inline: 10px;
-
-    &:hover {
-      border: 1px solid vars.$border-color;
-      border-radius: 10px;
-    }
-  }
 }
 
 .confirmation {
@@ -85,11 +76,30 @@
     text-transform: uppercase;
   }
 
+
+  &__card-time-item {
+    padding-inline: 10px;
+    border-radius: 10px;
+
+
+    &_active {
+      border: 3px solid vars.$border-color;
+
+
+    }
+
+    &:hover {
+      border: 1px solid vars.$border-color;
+    }
+  }
+
   &__card-days {
     @include card-style;
 
     &> :nth-child(3n) {
       text-decoration: line-through;
+      pointer-events: none;
+      opacity: 50%;
       text-decoration-thickness: 3px;
     }
   }
@@ -99,6 +109,8 @@
 
     &> :nth-child(2n) {
       text-decoration: line-through;
+      pointer-events: none;
+      opacity: 50%;
       text-decoration-thickness: 3px;
     }
   }

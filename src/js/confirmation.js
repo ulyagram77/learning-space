@@ -2,6 +2,17 @@ import CoursesService from './core/services/CoursesService';
 import { showSpinner, hideSpinner } from './utils/spinner';
 
 document.addEventListener('DOMContentLoaded', () => {
+  const timePickOptions = document.querySelectorAll('.confirmation__card-time-item');
+
+  timePickOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      timePickOptions.forEach(option =>
+        option.classList.remove('confirmation__card-time-item_active'),
+      );
+      option.classList.add('confirmation__card-time-item_active');
+    });
+  });
+
   async function loadCourseInfo() {
     try {
       const cardContainer = document.querySelector('.confirmation__card_course');

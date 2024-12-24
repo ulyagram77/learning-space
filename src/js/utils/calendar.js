@@ -4,12 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let month = date.getMonth();
 
   const day = document.querySelector('.calendar-dates');
-
   const currdate = document.querySelector('.calendar-current-date');
-
   const prenexIcons = document.querySelectorAll('.calendar-navigation span');
 
-  // Array of month names
+  // Массив названий месяцев
   const months = [
     'Січень',
     'Лютий',
@@ -25,31 +23,23 @@ document.addEventListener('DOMContentLoaded', () => {
     'Грудень',
   ];
 
-  // Function to generate the calendar
+  // Функция генерации календаря
   const manipulate = () => {
-    // Get the first day of the month
-    let dayone = new Date(year, month, 1).getDay();
+    let dayone = new Date(year, month, 1).getDay(); // день недели первого числа
+    let lastdate = new Date(year, month + 1, 0).getDate(); // последний день месяца (число)
+    let dayend = new Date(year, month, lastdate).getDay(); // день недели последнего числа месяца
+    let monthlastdate = new Date(year, month, 0).getDate(); // последний день предыдущего месяца
 
-    // Get the last date of the month
-    let lastdate = new Date(year, month + 1, 0).getDate();
-
-    // Get the day of the last date of the month
-    let dayend = new Date(year, month, lastdate).getDay();
-
-    // Get the last date of the previous month
-    let monthlastdate = new Date(year, month, 0).getDate();
-
-    // Variable to store the generated calendar HTML
     let lit = '';
 
-    // Loop to add the last dates of the previous month
+    // Заполняем "хвост" предыдущего месяца
     for (let i = dayone; i > 0; i--) {
       lit += `<li class="inactive">${monthlastdate - i + 1}</li>`;
     }
 
-    // Loop to add the dates of the current month
+    // Заполняем дни текущего месяца
     for (let i = 1; i <= lastdate; i++) {
-      // Check if the current date is today
+      // Проверка на "сегодня"
       let isToday =
         i === date.getDate() &&
         month === new Date().getMonth() &&
@@ -59,48 +49,53 @@ document.addEventListener('DOMContentLoaded', () => {
       lit += `<li class="${isToday}">${i}</li>`;
     }
 
-    // Loop to add the first dates of the next month
+    // "Хвост" следующего месяца, чтобы ровно заполнить недели
     for (let i = dayend; i < 6; i++) {
       lit += `<li class="inactive">${i - dayend + 1}</li>`;
     }
 
-    // Update the text of the current date element
-    // with the formatted current month and year
+    // Подпись в шапке (месяц и год)
     currdate.innerText = `${months[month]} ${year}`;
 
-    // update the HTML of the dates element
-    // with the generated calendar
+    // Выводим сгенерированные дни в календарь
     day.innerHTML = lit;
+
+    // ----------------------------
+    // ДОБАВЛЯЕМ ЛОГИКУ КЛИКА ПО ДНЯМ
+    // ----------------------------
+    const allDates = day.querySelectorAll('li');
+
+    allDates.forEach(li => {
+      li.addEventListener('click', () => {
+        // Сначала убираем класс "active" у всех элементов
+        allDates.forEach(item => item.classList.remove('active'));
+        // Добавляем класс "active" к кликнутому элементу
+        li.classList.add('active');
+      });
+    });
   };
 
+  // Генерация при первой загрузке
   manipulate();
 
-  // Attach a click event listener to each icon
+  // Обработка кликов на стрелках навигации
   prenexIcons.forEach(icon => {
-    // When an icon is clicked
     icon.addEventListener('click', () => {
-      // Check if the icon is "calendar-prev"
-      // or "calendar-next"
+      // Если нажали "предыдущий месяц"
       month = icon.id === 'calendar-prev' ? month - 1 : month + 1;
 
-      // Check if the month is out of range
+      // Следим, чтобы не выйти за пределы 0–11
       if (month < 0 || month > 11) {
-        // Set the date to the first day of the
-        // month with the new year
+        // Перескакиваем на новый год
         date = new Date(year, month, new Date().getDate());
-
-        // Set the year to the new year
         year = date.getFullYear();
-
-        // Set the month to the new month
         month = date.getMonth();
       } else {
-        // Set the date to the current date
+        // Обновляем date только текущим значением
         date = new Date();
       }
 
-      // Call the manipulate function to
-      // update the calendar display
+      // Перестраиваем календарь
       manipulate();
     });
   });
