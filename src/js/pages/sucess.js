@@ -1,4 +1,4 @@
-import CoursesService from './core/services/CoursesService';
+import CoursesService from '../core/services/CoursesService';
 
 document.addEventListener('DOMContentLoaded', () => {
   async function showMessage() {

@@ -1,5 +1,5 @@
-import CoursesService from './core/services/CoursesService';
-import { hideSpinner, showSpinner } from './utils/spinner';
+import CoursesService from '../core/services/CoursesService';
+import { showSpinner, hideSpinner } from '../utils/spinner';
 
 document.addEventListener('DOMContentLoaded', () => {
   //about courses page logic

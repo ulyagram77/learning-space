@@ -1,5 +1,5 @@
-import CoursesService from './core/services/CoursesService';
-import { showSpinner, hideSpinner } from './utils/spinner';
+import CoursesService from '../core/services/CoursesService';
+import { showSpinner, hideSpinner } from '../utils/spinner';
 
 document.addEventListener('DOMContentLoaded', () => {
   const timePickOptions = document.querySelectorAll('.confirmation__card-time-item');
