@@ -1,12 +1,13 @@
 @use '../base/variables' as vars;
 
 @mixin card-style {
-  padding: 10px 0;
+  padding: 3px 0;
   background-color: #f7f7f7;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 5px;
 
   background-color: #f7f7f7;
   border: 3px solid vars.$border-color;
@@ -95,24 +96,10 @@
 
   &__card-days {
     @include card-style;
-
-    &> :nth-child(3n) {
-      text-decoration: line-through;
-      pointer-events: none;
-      opacity: 50%;
-      text-decoration-thickness: 3px;
-    }
   }
 
   &__card-hours {
     @include card-style;
-
-    &> :nth-child(2n) {
-      text-decoration: line-through;
-      pointer-events: none;
-      opacity: 50%;
-      text-decoration-thickness: 3px;
-    }
   }
 
   &__button {
