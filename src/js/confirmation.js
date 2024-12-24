@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   async function loadCourseInfo() {
     try {
       const cardContainer = document.querySelector('.confirmation__card_course');
+      const confirmBtn = document.querySelector('.confirmation__button');
 
       const params = new URLSearchParams(window.location.search);
       const courseId = params.get('courseId');
@@ -19,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${course.img}" alt="course">
           </div>
         `;
+
+      confirmBtn.setAttribute('href', `/success/index.html?courseId=${course.id}`);
       hideSpinner();
     } catch (error) {
       console.error('Error fetching course info', error);

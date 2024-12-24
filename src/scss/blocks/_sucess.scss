@@ -1,0 +1,32 @@
+@use '../base/variables' as vars;
+
+.sucсess {
+  margin-top: 100px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__message {
+    text-align: center;
+    font-family: vars.$font-family-base;
+    font-size: 42px;
+
+    span {
+      color: greenyellow;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .sucсess {
+    margin-top: 50%;
+
+    &__message {
+      font-size: 24px;
+    }
+  }
+}
