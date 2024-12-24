@@ -110,6 +110,10 @@ $slide-padding: 10px;
 
     &__title {
       display: none;
+
+      .heading_course-bg {
+        display: none;
+      }
     }
 
     &__title-mobile {
@@ -117,6 +121,10 @@ $slide-padding: 10px;
       font-size: 20px;
       color: #fff;
       padding: 0;
+
+      .heading_course-bg {
+        display: none;
+      }
     }
 
     &__img {
@@ -164,7 +172,5 @@ $slide-padding: 10px;
     }
   }
 
-  .heading_course-bg {
-    display: none;
-  }
+
 }

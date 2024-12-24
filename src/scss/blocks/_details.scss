@@ -1,0 +1,104 @@
+@use '../base/variables' as vars;
+
+.details {
+  margin: 40px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__card-title {
+    font-size: 20px;
+  }
+
+  &__card-img {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__card-pluses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__card-plus {
+    font-size: 24px;
+    text-transform: uppercase;
+
+    &::before {
+      content: '+';
+      margin-right: 8px;
+    }
+  }
+
+  &__advantages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__advantages-title {
+    font-family: vars.$font-family-base;
+    font-size: 32px;
+  }
+
+  &__advantages-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__advantages-item {
+    max-width: 700px;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .details {
+
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 100px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .details {
+
+    &__card {
+      width: 300px;
+    }
+
+    &__card-plus {
+      font-size: 20px;
+    }
+
+    &__advantages-list {
+      gap: 30px;
+    }
+
+    &__advantages-item {
+      font-size: 20px;
+    }
+  }
+}

@@ -23,6 +23,7 @@ export default defineConfig({
         pick_course: path.resolve(__dirname, 'pick_course/index.html'),
         selection: path.resolve(__dirname, 'selection/index.html'),
         success: path.resolve(__dirname, 'success/index.html'),
+        details: path.resolve(__dirname, 'details/index.html'),
       },
     },
   },

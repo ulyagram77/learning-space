@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </svg>
                     <span>${course.reviewsCount} відгуків</span>
                   </a>
-                  <a class="course__button btn">
+                  <a href="/details/index.html?courseId=${course.id}" class="course__button btn">
                     <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M18.0042 16.021L15.969 18.0562L3.75783 5.84506L3.75782 17.0386L0.867855 17.0386V0.919895H16.9866L16.9866 3.80987H5.79301L18.0042 16.021Z"
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   <span>${course.reviewsCount} відгуків</span>
                 </a>
   
-                <a class="course__button btn">
+                <a href="/details/index.html?courseId=${course.id}" class="course__button btn">
                   <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M18.0042 16.021L15.969 18.0562L3.75783 5.84506L3.75782 17.0386L0.867855 17.0386V0.919895H16.9866L16.9866 3.80987H5.79301L18.0042 16.021Z"
