@@ -22,7 +22,7 @@ export default defineConfig({
         reviews: path.resolve(__dirname, 'reviews/index.html'),
         pick_course: path.resolve(__dirname, 'pick_course/index.html'),
         selection: path.resolve(__dirname, 'selection/index.html'),
-        sucess: path.resolve(__dirname, 'sucess/index.html'),
+        success: path.resolve(__dirname, 'success/index.html'),
       },
     },
   },
